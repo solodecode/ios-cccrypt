@@ -11,7 +11,7 @@ Interceptor.attach(encrypt_func, {
     console.log("[+] iv: \n" + hexdump(ptr(args[5]), { length: 16 }));
     console.log("[+] dataIn: \n" + hexdump(ptr(args[6]), { length: args[7].toInt32() }));
     console.log("[+] dataInLength: " + args[7].toInt32());
-	this.dataOutPtr = args[8];
+    this.dataOutPtr = args[8];
     this.dataOutLengthPtr = args[10];
   },
   onLeave: function (retval) {
